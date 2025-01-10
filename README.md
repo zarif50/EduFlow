@@ -127,14 +127,14 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 
 ### Student Section
 <ul>
-	<li>Multi Admin Authentication</li>
+	<li>Multi Student Authentication</li>
 	<li>Forget Password</li>
 	<li>Teacher Panel</li>
 </ul>
 
 ###Parent Section
 <ul>
-	<li>Multi Admin Authentication</li>
+	<li>Multi Parent Authentication</li>
 	<li>Forget Password</li>
 	<li>Parent Panel</li>
 </ul>
@@ -144,11 +144,11 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 
 
 
-POST /api/users/register - User registration for Admin, Teacher, Student, or Parent roles.
-POST /api/users/login - User login based on assigned roles.
-POST /api/users/logout - User logout to end active sessions securely.
-POST /api/users/forgot-password - Forgot password functionality with email recovery for any user role.
-POST /api/users/reset-password - Reset password using a token sent to the registered email.
+- **POST** /api/users/register - User registration for Admin, Teacher, Student, or Parent roles.
+- **POST** /api/users/login - User login based on assigned roles.
+- **POST** /api/users/logout - User logout to end active sessions securely.
+- **POST** /api/users/forgot-password - Forgot password functionality with email recovery for any user role.
+- **POST** /api/users/reset-password - Reset password using a token sent to the registered email.
 
 
 
