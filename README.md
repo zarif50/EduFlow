@@ -159,14 +159,19 @@ POST /api/users/reset-password - Reset password using a token sent to the regist
 
 ----------
 ### Teacher Authentication
-POST `/api/teachers/register`- Teacher registration.
-POST `/api/teachers/login` - Teacher login.
-POST `/api/teachers/logout` - Teacher logout.
+**POST** `/api/teachers/register`- Teacher registration.
+**POST** `/api/teachers/login` - Teacher login.
+**POST** `/api/teachers/logout` - Teacher logout.
 
 ### Student Authentication
-POST `/api/students/register`- Teacher registration.
-POST `/api/studentss/login` - Teacher login.
-POST `/api/students/logout` - Teacher logout.
+- **POST** `/api/students/register`- Student registration.
+- **POST** `/api/students/login` - Student login.
+- **POST** `/api/students/logout` - Student logout.
+
+  ### Parent Authentication
+- **POST** `/api/parents/register`- Parent registration.
+- **POST** `/api/parents/login` - Parent login.
+- **POST** `/api/parents/logout` - Parent logout.
 ----------
 
 
@@ -191,8 +196,8 @@ POST `/api/students/logout` - Teacher logout.
 			 <td>
 				 <ul>
 					 <li>Frontend, Backend, Database setup</li>
-					<li></li>
-					<li></li>
+					<li> registration and login pages</li>
+					<li>authentication</li>
 					<li></li>
 					<li></li>
 				</ul>
