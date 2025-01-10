@@ -154,14 +154,14 @@ POST /api/users/reset-password - Reset password using a token sent to the regist
 
 #### Admin Authentication
 
--   **POST** `/api/admin/login` - Admin login.
--   **POST** `/api/admin/logout` - Admin logout.
+- **POST** `/api/admin/login` - Admin login.
+- **POST** `/api/admin/logout` - Admin logout.
 
 ----------
 ### Teacher Authentication
-**POST** `/api/teachers/register`- Teacher registration.
-**POST** `/api/teachers/login` - Teacher login.
-**POST** `/api/teachers/logout` - Teacher logout.
+- **POST** `/api/teachers/register`- Teacher registration.
+- **POST** `/api/teachers/login` - Teacher login.
+- **POST** `/api/teachers/logout` - Teacher logout.
 
 ### Student Authentication
 - **POST** `/api/students/register`- Student registration.
