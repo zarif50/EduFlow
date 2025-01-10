@@ -26,7 +26,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 			 <td>20220104060</td> 
 			 <td>Md.Tanzil Tanim</td> 
 			 <td>tanimtanzilislam9@gmail.com</td> 
-			 <td>Backend</td>   
+			 <td> frontend+Backend</td>   
 		 </tr> 
 		 <tr> 
 			 <td>20220104063</td> 
