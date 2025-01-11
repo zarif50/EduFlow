@@ -230,3 +230,10 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 		 </tr> 
 	 </tbody> 
  </table>
+
+
+ <ul>
+	<li>Figma Link</li>
+	<li>https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Untitled?m=auto&t=LdvieShd28azBoT1-6</li>
+	
+</ul>
