@@ -197,10 +197,9 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 			 <td>
 				 <ul>
 					 <li>Frontend, Backend, Database setup</li>
-					<li> registration and login pages</li>
+					<li>registration and login pages</li>
 					<li>authentication</li>
-					<li></li>
-					<li></li>
+					<li>Table for Teacher, student and parent at Database</li>
 				</ul>
 			</td>
 		 </tr> 
@@ -208,10 +207,8 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 			 <td>Checkpoint 2</td> 
 			 <td>
 				 <ul>
-					 <li></li>
-					 <li></li>
-					 <li></li>
-					 <li></li>
+					 <li>Introduce Packages in Home Page</li>
+					 <li>Search and filtering option for teacher, student and parents</li>
 					 <li></li>
 					 <li></li>
 					 <li></li>
@@ -221,11 +218,9 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 		 <tr> 
 			 <td>Checkpoint 3</td> 
 			 <td><ul>
-					 <li></li>
-					 <li></li>
-					 <li></li>
-					 <li></li>
-					 <li></li>
+					 <li>Admin Authentication</li>
+					 <li>Admin Profile</li>
+					 <li>Approve or Reject  and handle users by Admin</li>			
 				 </ul>
 				</td>  
 		 </tr> 
