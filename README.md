@@ -246,8 +246,6 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 		 </tr> 
 	 </tbody> 
  </table>
- ###🤝 Contributing
-- We welcome contributions to this project! Please fork the repository and submit a pull request with your proposed changes.
-
+ 
 
  
