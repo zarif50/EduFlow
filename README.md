@@ -145,11 +145,11 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 
 
 
-- **POST** /api/users/register - User registration for Admin, Teacher, Student, or Parent roles.
-- **POST** /api/users/login - User login based on assigned roles.
-- **POST** /api/users/logout - User logout to end active sessions securely.
-- **POST** /api/users/forgot-password - Forgot password functionality with email recovery for any user role.
-- **POST** /api/users/reset-password - Reset password using a token sent to the registered email.
+- **POST** `/api/users/register` - User registration for Admin, Teacher, Student, or Parent roles.
+- **POST** `/api/users/login` - User login based on assigned roles.
+- **POST** `/api/users/logout` - User logout to end active sessions securely.
+- **POST** `/api/users/forgot-password` - Forgot password functionality with email recovery for any user role.
+- **POST** `/api/users/reset-password` - Reset password using a token sent to the registered email.
 
 
 
