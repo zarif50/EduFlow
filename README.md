@@ -12,6 +12,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 			 <th>ID</th> 
 			 <th>Name</th> 
 			 <th>Email</th> 
+			 
 			 <th>Github Name</th>
 			 <th>Role</th> 
 		 </tr> 
@@ -240,6 +241,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
                                            <li>Exam Marks Register</li>
 					    <li>Exam Result</li>
 	                                    <li>Student Attendence</li>
+				      <li>Notice Board</li>
 				         <li>Admin Authentication</li>
 					 <li>Admin Profile</li>
 					 <li>Approve or Reject  and handle users by Admin</li>			
