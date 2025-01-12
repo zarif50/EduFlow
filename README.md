@@ -225,6 +225,8 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 					 <li>Form validation and unique email address</li>
 					 <li>Class handling,Assigning subject into them</li>
 					  <li>Changing password of profile</li>
+					  <li>Parent section</li>
+					  <li>Teacher Section</li>
 				 </ul>
 			 </td>   
 		 </tr> 
