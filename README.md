@@ -141,7 +141,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 <ul>
 	<li>Multi Student Authentication</li>
 	<li>Forget Password</li>
-	<li>Teacher Panel</li>
+	<li>Student Panel</li>
 </ul>
 
 ### Parent Section
