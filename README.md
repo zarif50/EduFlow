@@ -12,6 +12,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 			 <th>ID</th> 
 			 <th>Name</th> 
 			 <th>Email</th> 
+			 <th>Github Name</th>
 			 <th>Role</th> 
 		 </tr> 
 	 </thead> 
@@ -20,24 +21,28 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 			 <td>20220104071</td> 
 			 <td>Zarif Mahmud</td> 
 			 <td>zarifmahmud250@gmail.com</td> 
+			 <td>Zarif50</td>
 			 <td>Lead (Frontend+Backend)</td> 
 		 </tr> 
 		 <tr> 
 			 <td>20220104060</td> 
 			 <td>Md.Tanzil Tanim</td> 
-			 <td>tanimtanzilislam9@gmail.com</td> 
+			 <td>tanimtanzilislam9@gmail.com</td>
+			 <td>animtanzilislam</td>
 			 <td> frontend+Backend</td>   
 		 </tr> 
 		 <tr> 
 			 <td>20220104063</td> 
 			 <td>Sanaf Salehin</td> 
-			 <td>sanafsalehin@gmail.com</td> 
+			 <td>sanafsalehin@gmail.com</td>
+			  <td>sanafsalehin</td> 
 			 <td>Backend</td>   
 		 </tr> 
 		 <tr> 
 			 <td>202201069</td> 
 			 <td>Afia Adilah</td> 
-			 <td>afiadilah246@gmail.com</td> 
+			 <td>afiadilah246@gmail.com</td>
+			  <td>afiadilah246</td> 
 			 <td>Frontend</td>   
 		 </tr> 
 	 </tbody> 
