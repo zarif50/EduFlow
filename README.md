@@ -228,6 +228,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 					  <li>Parent section</li>
 					  <li>Teacher Section</li>
 					  <li>Academic Menu ,submenu</li>
+					  <li>Class timetable</li>
 				 </ul>
 			 </td>   
 		 </tr> 
