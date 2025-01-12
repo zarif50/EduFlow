@@ -1,5 +1,3 @@
-  
-
 # EduFlow
 Eduflow is a modern school management platform built with PHP and Laravel, designed to streamline administrative tasks and enhance communication between students, teachers, and parents. It offers user-friendly features like attendance tracking, grade management, and scheduling, all within a secure and scalable framework.
 
