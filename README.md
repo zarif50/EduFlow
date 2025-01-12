@@ -9,8 +9,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 		 <tr> 
 			 <th>ID</th> 
 			 <th>Name</th> 
-			 <th>Email</th> 
-			 
+			 <th>Email</th>  
 			 <th>Github Name</th>
 			 <th>Role</th> 
 		 </tr> 
