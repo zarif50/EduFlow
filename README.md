@@ -222,9 +222,8 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 				 <ul>
 					 <li>Introduce Packages in Home Page</li>
 					 <li>Search and filtering option for teacher, student and parents</li>
-					 <li></li>
-					 <li></li>
-					 <li></li>
+					 <li>Form validation and unique email address</li>
+					 <li></li>					
 				 </ul>
 			 </td>   
 		 </tr> 
