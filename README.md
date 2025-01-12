@@ -238,6 +238,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 				          
 					  <li>Exam Schedule</li>
                                            <li>Exam Marks Register</li>
+					    <li>Exam Result</li>
 				         <li>Admin Authentication</li>
 					 <li>Admin Profile</li>
 					 <li>Approve or Reject  and handle users by Admin</li>			
