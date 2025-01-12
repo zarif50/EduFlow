@@ -223,7 +223,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 					 <li>Introduce Packages in Home Page</li>
 					 <li>Search and filtering option for teacher, student and parents</li>
 					 <li>Form validation and unique email address</li>
-					 <li></li>					
+					 <li>Class handling,Assigning subject into them</li>					
 				 </ul>
 			 </td>   
 		 </tr> 
