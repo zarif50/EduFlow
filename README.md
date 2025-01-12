@@ -227,6 +227,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 					  <li>Changing password of profile</li>
 					  <li>Parent section</li>
 					  <li>Teacher Section</li>
+					  <li>Academic Menu ,submenu</li>
 				 </ul>
 			 </td>   
 		 </tr> 
