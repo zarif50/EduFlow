@@ -234,8 +234,10 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 		 </tr> 
 		 <tr> 
 			 <td>Checkpoint 3</td> 
-			 <td><ul>
+			 <td><ul>          
+				          
 					  <li>Exam Schedule</li>
+                                           <li>Exam Marks Register</li>
 				         <li>Admin Authentication</li>
 					 <li>Admin Profile</li>
 					 <li>Approve or Reject  and handle users by Admin</li>			
