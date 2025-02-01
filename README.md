@@ -179,21 +179,7 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 - **POST** `/api/students/register`- Student registration.
 - **POST** `/api/students/login` - Student login.
 - **POST** `/api/students/logout` - Student logout.
-
-  ### Parent Authentication
-- **POST** `/api/parents/register`- Parent registration.
-- **POST** `/api/parents/login` - Parent login.
-- **POST** `/api/parents/logout` - Parent logout.
 ----------
-
-
-----------
-
-
-
-----------
-
-
 ## Milestones
 <table>
 	 <thead> 
@@ -208,9 +194,13 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 			 <td>
 				 <ul>
 					 <li>Frontend, Backend, Database setup</li>
-					<li>registration and login pages</li>
-					<li>authentication</li>
-					<li>Table for Teacher, student and parent at Database</li>
+					<li>Admin Dashboard Setup</li>
+					<li>Multi Auth Login(Admin)</li>
+					<li>Academic Year Management</li>
+					 <li>Class Management</li>
+					 <li>Fee Head Management</li>
+					 <li>Fee Structure Management</li>
+					  <li>Student Management</li>
 				</ul>
 			</td>
 		 </tr> 
@@ -218,14 +208,13 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 			 <td>Checkpoint 2</td> 
 			 <td>
 				 <ul>
-					 <li>Introduce Packages in Home Page</li>
-					 <li>Search and filtering option for teacher, student and parents</li>
-					 <li>Form validation and unique email address</li>
-					 <li>Class handling,Assigning subject into them</li>
-					  <li>Changing password of profile</li>
-					  <li>Parent section</li>
-					  <li>Teacher Section</li>
-					  <li>Academic Menu ,submenu</li>
+					 <li>Student List Filter</li>
+					 <li>Student List create/add</li>
+					 <li>Student List update/delete</li>
+					  <li>Student login & logout</li>
+					  <li>Student Change Password</li>
+					  <li>Announcement Management</li>
+					  <li>Subject Management</li>
 					  <li>Class timetable</li>
 				 </ul>
 			 </td>   
@@ -233,13 +222,11 @@ Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Unt
 		 <tr> 
 			 <td>Checkpoint 3</td> 
 			 <td><ul>          				          
-					  <li>Exam Schedule</li>
-                                           <li>Exam Marks Register</li>
-					    <li>Exam Result</li>
+					  <li>Teacher Management</li>
+                                           <li>Teacher Login System</li>
+					    <li>Assign Teacher to Class</li>
 	                                    <li>Student Attendence</li>
-				      <li>Notice Board</li>
-				         <li>Admin Authentication</li>
-					 <li>Admin Profile</li>
+				         <li>Time Table Management</li>
 					 <li>Approve or Reject  and handle users by Admin</li>			
 				 </ul>
 				</td>  
