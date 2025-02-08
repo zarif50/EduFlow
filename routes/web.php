@@ -62,6 +62,10 @@ Route::group(['prefix'=>'admin'],function(){
   Route::get('student/create',[StudentController::class,'index'])->name('student.create');
   Route::post('student/store',[StudentController::class,'store'])->name('student.store');
   Route::get('student/read',[StudentController::class,'read'])->name('student.read');
+  Route::get('student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
+  Route::post('student/update/{id}',[StudentController::class,'update'])->name('student.update');
+  Route::get('student/delete/{id}',[StudentController::class,'delete'])->name('student.delete');
+
   //Route::get('fee-structure/read',[FeeStructureController::class,'read'])->name('fee-structure.read');
   //Route::get('fee-structure/delete{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
 //  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');

@@ -96,8 +96,8 @@
 <td>I{{$item->email}}</td>
 
 <td>{{$item->created_at}}</td>
-<td><a href="{{route('class.edit',$item->id)}}" class="btn btn-primary">Edit</a></td>
-<td><a href="{{route('class.delete',$item->id)}}" onclick="return confirm('Are tou sure want to Delete?');"  class="btn btn-danger">Delete</a></td>
+<td><a href="{{route('student.edit',$item->id)}}" class="btn btn-primary">Edit</a></td>
+<td><a href="{{route('student.delete',$item->id)}}" onclick="return confirm('Are tou sure want to Delete?');"  class="btn btn-danger">Delete</a></td>
 </tr>
 @endforeach
 
