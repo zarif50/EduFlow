@@ -93,16 +93,9 @@ class StudentController extends Controller
         }
 
         public function delete($id)
-{
-    $student = User::find($id);
-
-    if (!$student) {
-        return redirect()->route('student.read')->with('error', 'Student not found');
-    }
-
-    $student->delete();
-
-    return redirect()->route('student.read')->with('success', 'Student deleted successfully');
-}
-
+        {
+         $student = User::find($id);
+         $student->delete();
+         return redirect()->route('student.read')->with('success', 'Student deleted successfully');
+        }
 }
