@@ -6,7 +6,7 @@ use App\Http\Controllers\AcademicYearController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\FeeHeadController;
 use App\Http\Controllers\FeeStructureController;
-use App\Http\Controllers\StudentController; 
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 
 
@@ -27,8 +27,9 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
       //auth
       Route::group(['middleware'=>'auth'], function(){
         Route::get('dashboard',[UserController::class,'dashboard'])->name('student.dashboard');
-Route::get('logout',[UserController::class,'logout'])->name('student.logout');
-
+        Route::get('logout',[UserController::class,'logout'])->name('student.logout');
+        Route::get('change-password',[UserController::class,'changePassword'])->name('student.changePassword');
+        Route::post('update-password',[UserController::class,'updatePassword'])->name('student.updatePassword');
       });
 });
     Route::group(['middleware'=>'admin.guest'],function(){
@@ -50,7 +51,7 @@ Route::get('logout',[UserController::class,'logout'])->name('student.logout');
     Route::get('academic-year/delete/{id}', [AcademicYearController::class,'delete'])->name('academic-year.delete');
     Route::get('academic-year/edit/{id}', [AcademicYearController::class,'edit'])->name('academic-year.edit');
     Route::post('academic-year/update', [AcademicYearController::class,'update'])->name('academic-year.update');
-    
+
 
     //class Management
     Route::get('class/create', [ClassesController::class,'index'])->name('class.create');
@@ -97,6 +98,6 @@ Route::get('logout',[UserController::class,'logout'])->name('student.logout');
 
 
 
- 
+
 
 
