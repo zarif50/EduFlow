@@ -49,9 +49,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
   
 
 ## Target Audience
-
-  
-
+ 
 1)School Administrators: Looking for efficient tools to manage student records, staff information, and overall school operations.
 
 2)Teachers: In need of a platform to track attendance, manage grades, share assignments, and communicate with parents.
@@ -59,6 +57,7 @@ Eduflow is a modern school management platform built with PHP and Laravel, desig
 3)Parents: Interested in staying informed about their child's academic performance, attendance, and school activities.
 
 4)Students: Seeking an organized system to access schedules, assignments, and performance reports conveniently.
+
 
 5)Educational Institutions: Schools, colleges, and tutoring centers aiming to digitalize and optimize their management processes.
 
