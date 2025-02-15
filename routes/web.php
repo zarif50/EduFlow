@@ -6,11 +6,32 @@ use App\Http\Controllers\AcademicYearController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\FeeHeadController;
 use App\Http\Controllers\FeeStructureController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UserController;
+
 
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix'=>'admin'],function(){
+
+
+
+Route::group(['prefix'=>'student'],function(){
+      //guest
+      Route::group(['middleware'=>'guest'], function(){
+        Route::get('login',[UserController::class,'index'])->name('student.login');
+Route::post('authenticate',[UserController::class,'authenticate'])->name('student.authenticate');
+
+      });
+
+      //auth
+      Route::group(['middleware'=>'auth'], function(){
+        Route::get('dashboard',[UserController::class,'dashboard'])->name('student.dashboard');
+        Route::get('logout',[UserController::class,'logout'])->name('student.logout');
+        Route::get('change-password',[UserController::class,'changePassword'])->name('student.changePassword');
+        Route::post('update-password',[UserController::class,'updatePassword'])->name('student.updatePassword');
+      });
+});
     Route::group(['middleware'=>'admin.guest'],function(){
     Route::get('login', [AdminController::class,'index'])->name('admin.login');
     Route::get('register', [AdminController::class,'register'])->name('admin.register');
@@ -30,7 +51,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('academic-year/delete/{id}', [AcademicYearController::class,'delete'])->name('academic-year.delete');
     Route::get('academic-year/edit/{id}', [AcademicYearController::class,'edit'])->name('academic-year.edit');
     Route::post('academic-year/update', [AcademicYearController::class,'update'])->name('academic-year.update');
-    
+
 
     //class Management
     Route::get('class/create', [ClassesController::class,'index'])->name('class.create');
@@ -51,6 +72,32 @@ Route::group(['prefix'=>'admin'],function(){
 
    //fees Structure
   Route::get('fee-structure/create',[FeeStructureController::class,'index'])->name('fee-structure.create');
-  Route::post('fee-structure/store',[FeeStructureController::class,'store'])->name('fee-structure.store'); 
-});
+  Route::post('fee-structure/store',[FeeStructureController::class,'store'])->name('fee-structure.store');
+  Route::get('fee-structure/read',[FeeStructureController::class,'read'])->name('fee-structure.read');
+  Route::get('fee-structure/delete{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
+  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
+  Route::post('fee-structure/update{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
+
+
+  Route::get('student/create',[StudentController::class,'index'])->name('student.create');
+  Route::post('student/store',[StudentController::class,'store'])->name('student.store');
+  Route::get('student/read',[StudentController::class,'read'])->name('student.read');
+  Route::get('student/edit/{id}',[StudentController::class,'edit'])->name('student.edit');
+  Route::post('student/update/{id}',[StudentController::class,'update'])->name('student.update');
+  Route::get('student/delete/{id}',[StudentController::class,'delete'])->name('student.delete');
+
+  //Route::get('fee-structure/read',[FeeStructureController::class,'read'])->name('fee-structure.read');
+  //Route::get('fee-structure/delete{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
+//  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
+ // Route::post('fee-structure/update{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
+
+
+
+
+
+
+
+
+
+
 
