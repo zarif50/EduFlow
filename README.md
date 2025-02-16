@@ -1,238 +1,66 @@
-# EduFlow
-Eduflow is a modern school management platform built with PHP and Laravel, designed to streamline administrative tasks and enhance communication between students, teachers, and parents. It offers user-friendly features like attendance tracking, grade management, and scheduling, all within a secure and scalable framework.
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-  
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Team members
-<table>
-	 <thead> 
-		 <tr> 
-			 <th>ID</th> 
-			 <th>Name</th> 
-			 <th>Email</th>  
-			 <th>Github Name</th>
-			 <th>Role</th> 
-		 </tr> 
-	 </thead> 
-	 <tbody> 
-		 <tr> 
-			 <td>20220104071</td> 
-			 <td>Zarif Mahmud</td> 
-			 <td>zarifmahmud250@gmail.com</td> 
-			 <td>Zarif50</td>
-			 <td>Lead (Frontend+Backend)</td> 
-		 </tr> 
-		 <tr> 
-			 <td>20220104060</td> 
-			 <td>Md.Tanzil Tanim</td> 
-			 <td>tanimtanzilislam9@gmail.com</td>
-			 <td>animtanzilislam</td>
-			 <td> frontend+Backend</td>   
-		 </tr> 
-		 <tr> 
-			 <td>20220104063</td> 
-			 <td>Sanaf Salehin</td> 
-			 <td>sanafsalehin@gmail.com</td>
-			  <td>sanafsalehin</td> 
-			 <td>Backend</td>   
-		 </tr> 
-		 <tr> 
-			 <td>202201069</td> 
-			 <td>Afia Adilah</td> 
-			 <td>afiadilah246@gmail.com</td>
-			  <td>afiadilah246</td> 
-			 <td>Frontend</td>   
-		 </tr> 
-	 </tbody> 
- </table>
+## About Laravel
 
-  
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Target Audience
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-  
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-1)School Administrators: Looking for efficient tools to manage student records, staff information, and overall school operations.
+## Learning Laravel
 
-2)Teachers: In need of a platform to track attendance, manage grades, share assignments, and communicate with parents.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-3)Parents: Interested in staying informed about their child's academic performance, attendance, and school activities.
+You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-4)Students: Seeking an organized system to access schedules, assignments, and performance reports conveniently.
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-5)Educational Institutions: Schools, colleges, and tutoring centers aiming to digitalize and optimize their management processes.
+## Laravel Sponsors
 
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
+### Premium Partners
 
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[WebReinvent](https://webreinvent.com/)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Jump24](https://jump24.co.uk)**
+- **[Redberry](https://redberry.international/laravel/)**
+- **[Active Logic](https://activelogic.com)**
+- **[byte5](https://byte5.de)**
+- **[OP.GG](https://op.gg)**
 
+## Contributing
 
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-  
-  
+## Code of Conduct
 
-## Tech Stack
-<table>
-	 <thead> 
-		 <tr> 
-			 <th>Teck Stack</th> 
-			 <th>We Use</th> 
-		 </tr> 
-	 </thead> 
-	 <tbody> 
-		 <tr> 
-			 <td>Backend</td> 
-			 <td>Laravel</td> 
-		 </tr> 
-		 <tr> 
-			 <td>Frontend</td> 
-			 <td>php</td>   
-		 </tr> 
-		 <tr> 
-			 <td>Database</td> 
-			 <td>phpMyAdmin</td>  
-		 </tr>  
-		 <tr> 
-			 <td>Rendering Method</td> 
-			 <td>CSR (Client-Side Rendering)</td> 
-		 </tr> 
-		  <tr> 
-			 <td>Version Control</td> 
-			 <td>Git</td> 
-		 </tr> 
-		  <tr> 
-			 <td>Repository</td> 
-			 <td>Github</td> 
-		 </tr> 
-	 </tbody> 
- </table>
-  
-## UI Design
-Figma Design   :<a href="https://www.figma.com/design/698MIXaZPQRPmjMFVvdZzh/Untitled?m=auto&t=yKu9x5ELny2uWqwU-6">Figma Design</a>
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
+## Security Vulnerabilities
 
-## Project Features
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-### User Section
-<ul>
-	<li>Implement secure login and registration for multiple user roles such as Admin, Teachers, Students, and Parents.</li>
-	<li>Ensure role-based access control to protect sensitive information and functionalities.</li>
-	<li>Allow users to Create, Read, Update, and Delete data related to their respective roles (e.g., student profiles, teacher records, assignments, schedules).</li>
-  <li>Maintain data validation and error handling for seamless user experience.</li>
-  <li>Provide dynamic search functionality for records like students, classes, assignments, and attendance.</li>
-</ul>
+## License
 
-
-
-### Admin Section
-<ul>
-	<li>Multi Admin Authentication</li>
-	<li>Forget Password</li>
-	<li>Admin Panel</li>
-</ul>
-
-### Teacher Section
-<ul>
-	<li>Multi Admin Authentication</li>
-	<li>Forget Password</li>
-	<li>Teacher Panel</li>
-</ul>
-
-### Student Section
-<ul>
-	<li>Multi Student Authentication</li>
-	<li>Forget Password</li>
-	<li>Student Panel</li>
-</ul>
-
-### Parent Section
-<ul>
-	<li>Multi Parent Authentication</li>
-	<li>Forget Password</li>
-	<li>Parent Panel</li>
-</ul>
-
-##  API Endpoints
-### **Authentication**
-
-
-
-- **POST** `/api/users/register` - User registration for Admin, Teacher, Student, or Parent roles.
-- **POST** `/api/users/login` - User login based on assigned roles.
-- **POST** `/api/users/logout` - User logout to end active sessions securely.
-- **POST** `/api/users/forgot-password` - Forgot password functionality with email recovery for any user role.
-- **POST** `/api/users/reset-password` - Reset password using a token sent to the registered email.
-
-
-
-#### Admin Authentication
-
-- **POST** `/api/admin/login` - Admin login.
-- **POST** `/api/admin/logout` - Admin logout.
-
-----------
-### Teacher Authentication
-- **POST** `/api/teachers/register`- Teacher registration.
-- **POST** `/api/teachers/login` - Teacher login.
-- **POST** `/api/teachers/logout` - Teacher logout.
-
-### Student Authentication
-- **POST** `/api/students/register`- Student registration.
-- **POST** `/api/students/login` - Student login.
-- **POST** `/api/students/logout` - Student logout.
-----------
-## Milestones
-<table>
-	 <thead> 
-		 <tr> 
-			 <th>Milestones</th> 
-			 <th>We Cover</th> 
-		 </tr> 
-	 </thead> 
-	 <tbody> 
-		 <tr> 
-			 <td>Checkpoint 1</td> 
-			 <td>
-				 <ul>
-					 <li>Frontend, Backend, Database setup</li>
-					<li>Admin Dashboard Setup</li>
-					<li>Multi Auth Login(Admin)</li>
-					<li>Academic Year Management</li>
-					 <li>Class Management</li>
-					 <li>Fee Head Management</li>
-					 <li>Fee Structure Management</li>
-					  <li>Student Management</li>
-				</ul>
-			</td>
-		 </tr> 
-		 <tr> 
-			 <td>Checkpoint 2</td> 
-			 <td>
-				 <ul>
-					 <li>Student List Filter</li>
-					 <li>Student List create/add</li>
-					 <li>Student List update/delete</li>
-					  <li>Student login & logout</li>
-					  <li>Student Change Password</li>
-					  <li>Announcement Management</li>
-					  <li>Subject Management</li>
-					  <li>Class timetable</li>
-				 </ul>
-			 </td>   
-		 </tr> 
-		 <tr> 
-			 <td>Checkpoint 3</td> 
-			 <td><ul>          				          
-					  <li>Teacher Management</li>
-                                           <li>Teacher Login System</li>
-					    <li>Assign Teacher to Class</li>
-	                                    <li>Student Attendence</li>
-				         <li>Time Table Management</li>
-					 <li>Approve or Reject  and handle users by Admin</li>			
-				 </ul>
-				</td>  
-		 </tr> 
-	 </tbody> 
- </table>
- 
-
- 
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
