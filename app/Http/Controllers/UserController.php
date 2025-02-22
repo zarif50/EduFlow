@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Announcement;
 
 class UserController extends Controller
 {
@@ -33,7 +34,8 @@ class UserController extends Controller
     }
     public function dashboard()
     {
-        return view ('student.dashboard');
+        $data['announcement']= Announcement:: where('type','student')->latest()->limit(1)->get();
+        return view ('student.dashboard',$data);
 
 
 
