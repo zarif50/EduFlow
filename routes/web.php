@@ -8,6 +8,7 @@ use App\Http\Controllers\FeeHeadController;
 use App\Http\Controllers\FeeStructureController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AnnouncementController;
 
 
 Route::get('/', function () {
@@ -52,7 +53,10 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
     Route::get('academic-year/edit/{id}', [AcademicYearController::class,'edit'])->name('academic-year.edit');
     Route::post('academic-year/update', [AcademicYearController::class,'update'])->name('academic-year.update');
 
-
+    //Announcement Management
+    Route::get('announcement/create',[AnnouncementController::class,'index'])->name('announcement.create');
+    Route::post('announcement/store',[AnnouncementController::class,'store'])->name('announcement.store');
+    Route::get('announcement/read',[AnnouncementController::class,'read'])->name('announcement.read');
     //class Management
     Route::get('class/create', [ClassesController::class,'index'])->name('class.create');
     Route::post('class/store', [ClassesController::class,'store'])->name('class.store');
