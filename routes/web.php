@@ -57,6 +57,10 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
     Route::get('announcement/create',[AnnouncementController::class,'index'])->name('announcement.create');
     Route::post('announcement/store',[AnnouncementController::class,'store'])->name('announcement.store');
     Route::get('announcement/read',[AnnouncementController::class,'read'])->name('announcement.read');
+    Route::get('announcement/edit/{id}',[AnnouncementController::class,'edit'])->name('announcement.edit');
+    Route::post('announcement/update/{id}',[AnnouncementController::class,'update'])->name('announcement.update');
+    Route::get('announcement/delete/{id}',[AnnouncementController::class,'delete'])->name('announcement.delete');
+
     //class Management
     Route::get('class/create', [ClassesController::class,'index'])->name('class.create');
     Route::post('class/store', [ClassesController::class,'store'])->name('class.store');
