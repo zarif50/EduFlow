@@ -8,10 +8,10 @@ use App\Http\Controllers\FeeHeadController;
 use App\Http\Controllers\FeeStructureController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
-<<<<<<< HEAD
-=======
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\AssignSubjectToClassController;
 use App\Http\Controllers\AnnouncementController;
->>>>>>> StudentManagement
+
 
 
 Route::get('/', function () {
@@ -56,8 +56,8 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
     Route::get('academic-year/edit/{id}', [AcademicYearController::class,'edit'])->name('academic-year.edit');
     Route::post('academic-year/update', [AcademicYearController::class,'update'])->name('academic-year.update');
 
-<<<<<<< HEAD
-=======
+
+
     //Announcement Management
     Route::get('announcement/create',[AnnouncementController::class,'index'])->name('announcement.create');
     Route::post('announcement/store',[AnnouncementController::class,'store'])->name('announcement.store');
@@ -65,7 +65,7 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
     Route::get('announcement/edit/{id}',[AnnouncementController::class,'edit'])->name('announcement.edit');
     Route::post('announcement/update/{id}',[AnnouncementController::class,'update'])->name('announcement.update');
     Route::get('announcement/delete/{id}',[AnnouncementController::class,'delete'])->name('announcement.delete');
->>>>>>> StudentManagement
+
 
     //class Management
     Route::get('class/create', [ClassesController::class,'index'])->name('class.create');
@@ -75,6 +75,19 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
     Route::post('class/update', [ClassesController::class,'update'])->name('class.update');
     Route::get('class/delete/{id}', [ClassesController::class,'delete'])->name('class.delete');
   });
+//subject management
+  Route::get('subject/create', [SubjectController::class,'index'])->name('subject.create');
+  Route::post('subject/store', [SubjectController::class,'store'])->name('subject.store');
+  Route::get('subject/read', [SubjectController::class,'read'])->name('subject.read');
+  Route::get('subject/delete/{id}', [SubjectController::class,'delete'])->name('subject.delete');
+  Route::get('subject/edit/{id}', [SubjectController::class,'edit'])->name('subject.edit');
+  Route::post('subject/update/{id}', [SubjectController::class,'update'])->name('subject.update');
+
+  //assignsubject
+  Route::get('assign-subject/create', [AssignSubjectToClassController::class,'index'])->name('assign-subject.create');
+  Route::post('assign-subject/store', [AssignSubjectToClassController::class,'store'])->name('assign-subject.store');
+  Route::get('assign-subject/read', [AssignSubjectToClassController::class,'read'])->name('assign-subject.read');
+
 
   //Fees Management
   Route::get('fee-head/create', [FeeHeadController::class,'index'])->name('fee-head.create');
@@ -88,9 +101,9 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
   Route::get('fee-structure/create',[FeeStructureController::class,'index'])->name('fee-structure.create');
   Route::post('fee-structure/store',[FeeStructureController::class,'store'])->name('fee-structure.store');
   Route::get('fee-structure/read',[FeeStructureController::class,'read'])->name('fee-structure.read');
-  Route::get('fee-structure/delete{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
-  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
-  Route::post('fee-structure/update{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
+  Route::get('fee-structure/delete/{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
+  Route::get('fee-structure/edit/{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
+  Route::post('fee-structure/update/{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
 
 
   Route::get('student/create',[StudentController::class,'index'])->name('student.create');

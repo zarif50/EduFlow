@@ -363,6 +363,37 @@ Announcement Management
 
 >>>>>>> StudentManagement
 
+<li class="nav-item">
+<a href="#" class="nav-link">
+<i class="nav-icon fas fa-chart-pie"></i>
+<p>
+Subject Management
+<i class="right fas fa-angle-left"></i>
+</p>
+</a>
+<ul class="nav nav-treeview">
+
+
+
+
+<li class="nav-item">
+<a href="{{route('announcement.create')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Add Subject</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="{{route('announcement.read')}}" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>View Subject</p>
+</a>
+</li>
+</ul>
+</li>
+
+
+
+
 </ul>
 </nav>
 </div>
