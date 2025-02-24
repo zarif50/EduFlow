@@ -22,7 +22,11 @@ class SubjectController extends Controller
     {
         
 
-    
+    $classes = ClassModel::all();  // Ensure you replace ClassModel with the actual model
+    $subjects = Subject::all();  // Ensure you replace Subject with the actual model
+
+    return view('admin.assign_subject.form', compact('classes', 'subjects'));
+
 
     }
 

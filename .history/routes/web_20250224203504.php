@@ -10,8 +10,6 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\SubjectController;
-use App\Http\Controllers\AssignSubjectToClassController;
-
 
 
 Route::get('/', function () {
@@ -79,12 +77,8 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
   Route::get('subject/delete/{id}', [SubjectController::class,'delete'])->name('subject.delete');
   Route::get('subject/edit/{id}', [SubjectController::class,'edit'])->name('subject.edit');
   Route::post('subject/update/{id}', [SubjectController::class,'update'])->name('subject.update');
-
+  
   //assignsubject
-  Route::get('assign-subject/create', [AssignSubjectToClassController::class,'index'])->name('assign-subject.create');
-  Route::post('assign-subject/store', [AssignSubjectToClassController::class,'store'])->name('assign-subject.store');
-  Route::get('assign-subject/read', [AssignSubjectToClassController::class,'read'])->name('assign-subject.read');
-
 
   //Fees Management
   Route::get('fee-head/create', [FeeHeadController::class,'index'])->name('fee-head.create');

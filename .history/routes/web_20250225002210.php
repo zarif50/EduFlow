@@ -82,8 +82,7 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
 
   //assignsubject
   Route::get('assign-subject/create', [AssignSubjectToClassController::class,'index'])->name('assign-subject.create');
-  Route::post('assign-subject/store', [AssignSubjectToClassController::class,'store'])->name('assign-subject.store');
-  Route::get('assign-subject/read', [AssignSubjectToClassController::class,'read'])->name('assign-subject.read');
+  Route::post('assign-subject/store', [SubjectController::class,'store'])->name('subject.store');
 
 
   //Fees Management

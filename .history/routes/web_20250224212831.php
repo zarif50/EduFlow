@@ -10,7 +10,6 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\SubjectController;
-use App\Http\Controllers\AssignSubjectToClassController;
 
 
 
@@ -82,8 +81,6 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
 
   //assignsubject
   Route::get('assign-subject/create', [AssignSubjectToClassController::class,'index'])->name('assign-subject.create');
-  Route::post('assign-subject/store', [AssignSubjectToClassController::class,'store'])->name('assign-subject.store');
-  Route::get('assign-subject/read', [AssignSubjectToClassController::class,'read'])->name('assign-subject.read');
 
 
   //Fees Management
