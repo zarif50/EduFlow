@@ -6,6 +6,7 @@ use App\Models\AssignSubjectToClass;
 use Illuminate\Http\Request;
 use App\Models\Classes;
 use App\Models\Subject;
+
 class AssignSubjectToClassController extends Controller
 {
     /**
@@ -53,9 +54,10 @@ class AssignSubjectToClassController extends Controller
                     ]
                     );
             }
-    }
+            return redirect()->route('assign-subject.read')->with('success','Subject assigned to a class added successfully');
+         }
 
-   
+
     public function show(AssignSubjectToClass $assignSubjectToClass)
     {
         //
@@ -64,30 +66,57 @@ class AssignSubjectToClassController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AssignSubjectToClass $assignSubjectToClass)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AssignSubjectToClass $assignSubjectToClass)
-    {
-        //
-    }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AssignSubjectToClass $assignSubjectToClass)
+    public function delete( $id)
     {
-        //
+        $res =AssignSubjectToClass::find($id);
+        $res ->delete();
+        return redirect()->route('assign-subject.read')->with('success','Subject assigned to a class deleted successfully');
+    }
+    public function edit( $id)
+    {
+        $data['assign_subject'] =AssignSubjectToClass::find($id);
+        $data['classes'] =Classes::all();
+        $data['subjects']=Subject::all();
+
+        return view('admin.assign_subject.edit_form',$data);
     }
 
-    public function read()
-      {
-        $data['assign_subjects']=AssignSubjectToClass::all();
-        return view('admin.assign_subject.table',$data);
-      }
+    public function read(Request $request)
+    {
+        $query = AssignSubjectToClass::with(['class', 'subject']);
+
+        $classId = $request->get('class_id') ?? $request->get('class-id'); // Check both versions
+
+        if (!empty($classId)) {
+            $query->where('class_id', (int) $classId);
+        }
+
+        $data['assign_subjects'] = $query->get();
+        $data['classes'] = Classes::all();
+
+        return view('admin.assign_subject.table', $data);
+    }
+
+    public function update(Request $request,$id)
+    {
+
+
+        $data=AssignSubjectToClass::find($id);
+        $data->class_id =$request->class_id;
+        $data->subject_id =$request->subject_id;
+        $data->update();
+        return redirect()->route('assign-subject.read')->with('success','Subject assigned to a class updated successfully');
+
+
+
+    }
 }

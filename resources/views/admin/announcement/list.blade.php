@@ -56,8 +56,8 @@
     @foreach($announcements as $item)
 <tr>
 <td>{{$item->id}}</td>
-<td>I{{$item->type}}</td>
-<td>I{{$item->message}}</td>
+<td>{{$item->type}}</td>
+<td>{{$item->message}}</td>
 <td>{{$item->created_at}}</td>
 <td><a href="{{route('announcement.edit',$item->id)}}" class="btn btn-primary">Edit</a></td>
 <td><a href="{{route('announcement.delete',$item->id)}}" onclick="return confirm('Are tou sure want to Delete?');"  class="btn btn-danger">Delete</a></td>
