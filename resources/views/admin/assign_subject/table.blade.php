@@ -37,9 +37,23 @@
             </div>
             @endif
 <div class="card-header">
-<h3 class="card-title">Assign Subject List</h3>
+    <form action="" class="row">
+    <div class ="form-group col-md-3">
+<select name="class-id" class="form-control">
+    <option disabled selected>
+        Select Class
+    </option>
+    @foreach($classes as $class)
+    <option value="{{$class->id}}"{{$class->id==request('class_id')?
+    'selected':''}}>{{$class->name}}</option>
+    @endforeach
+</select>
+    </div>
+<div class="form-group col-md-3">
+    <button type="submit" class="btn btn-primary">Filter</button>
 </div>
-
+</form>
+</div>
 <div class="card-body">
 <table id="example1" class="table table-bordered table-striped">
 <thead>
@@ -47,6 +61,7 @@
 <th>ID</th>
 <th>Class Name</th>
 <th>Subject Name</th>
+<th>Subject Type</th>
 <th>Created Time</th>
 <th>Edit</th>
 <th>Delete</th>
@@ -56,11 +71,12 @@
     @foreach($assign_subjects as $assign_subject )
 <tr>
 <td>{{$assign_subject->id}}</td>
-<td>{{$assign_subject->class_id}}</td>
-<td>{{$assign_subject->subject_id}}</td>
+<td>{{$assign_subject->class->name}}</td>
+<td>{{$assign_subject->subject->name}}</td>
+<td>{{$assign_subject->subject->type}}</td>
 <td>{{$assign_subject->created_at}}</td>
-<td><a href="{{route('class.edit',$assign_subject->id)}}" class="btn btn-primary">Edit</a></td>
-<td><a href="{{route('class.delete',$assign_subject->id)}}" onclick="return confirm('Are tou sure want to Delete?');"  class="btn btn-danger">Delete</a></td>
+<td><a href="{{route('assign-subject.edit',$assign_subject->id)}}" class="btn btn-primary">Edit</a></td>
+<td><a href="{{route('assign-subject.delete',$assign_subject->id)}}" onclick="return confirm('Are tou sure want to Delete?');"  class="btn btn-danger">Delete</a></td>
 </tr>
 @endforeach
 
