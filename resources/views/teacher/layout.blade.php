@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdminLTE 3 | Dashboard</title>
+<title>Teacher Dashboard</title>
 <base href="{{asset('admincss')}}/"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 
@@ -197,14 +197,14 @@ Nora Silvester
 
 
 <li class="nav-item">
-<a href="{{route('admin.dashboard')}}" class="nav-link">
+<a href="{{route('teacher.dashboard')}}" class="nav-link">
 <i class="nav-icon fas fa-th"></i>
 <p>
 Dashboard
 </p>
 </a>
 </li>
-<li class="nav-item">
+<!-- <li class="nav-item">
 <a href="#" class="nav-link">
 <i class="nav-icon fas fa-chart-pie"></i>
 <p>
@@ -212,245 +212,16 @@ Academic Year
 <i class="right fas fa-angle-left"></i>
 </p>
 </a>
-<ul class="nav nav-treeview">
+</li> -->
+
 <li class="nav-item">
-<a href="{{route('academic-year.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Record</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="{{route('academic-year.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Record</p>
-</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon fas fa-chart-pie"></i>
+<a href="{{route('teacher.logout')}}" class="nav-link">
+<i class="nav-icon fas fa-th"></i>
 <p>
-Class Management
-<i class="right fas fa-angle-left"></i>
+Logout
 </p>
 </a>
-<ul class="nav nav-treeview">
-<li class="nav-item">
-<a href="{{route('class.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Record</p>
-</a>
 </li>
-<li class="nav-item">
-<a href="{{route('class.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Record</p>
-</a>
-</li>
-</ul>
-</li>
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon fas fa-chart-pie"></i>
-<p>
-Fee Head Management
-<i class="right fas fa-angle-left"></i>
-</p>
-</a>
-<ul class="nav nav-treeview">
-<li class="nav-item">
-<a href="{{route('fee-head.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Record</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="{{route('fee-head.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Record</p>
-</a>
-</li>
-</ul>
-</li>
-
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon fas fa-chart-pie"></i>
-<p>
-Fee Structure Management
-<i class="right fas fa-angle-left"></i>
-</p>
-</a>
-<ul class="nav nav-treeview">
-
-
-
-
-<li class="nav-item">
-<a href="{{route('fee-structure.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Record</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="{{route('fee-structure.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Record</p>
-</a>
-</li>
-</ul>
-</li>
-
-
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon fas fa-chart-pie"></i>
-<p>
-Studet Management
-<i class="right fas fa-angle-left"></i>
-</p>
-</a>
-<ul class="nav nav-treeview">
-
-
-
-
-<li class="nav-item">
-<a href="{{route('student.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Student</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="{{route('student.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Student</p>
-</a>
-</li>
-</ul>
-</li>
-
-<<<<<<< HEAD
-=======
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon fas fa-chart-pie"></i>
-<p>
-Announcement Management
-<i class="right fas fa-angle-left"></i>
-</p>
-</a>
-<ul class="nav nav-treeview">
-
-
-
-
-<li class="nav-item">
-<a href="{{route('announcement.create')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Add Announcement</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="{{route('announcement.read')}}" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>View Announcement</p>
-</a>
-</li>
-</ul>
-</li>
-
->>>>>>> StudentManagement
-
-<li class="nav-item">
-    <a href="#" class="nav-link">
-    <i class="nav-icon fas fa-chart-pie"></i>
-    <p>
-    Subject Management
-    <i class="right fas fa-angle-left"></i>
-    </p>
-    </a>
-    <ul class="nav nav-treeview">
-
-
-
-
-    <li class="nav-item">
-    <a href="{{route('announcement.create')}}" class="nav-link">
-    <i class="far fa-circle nav-icon"></i>
-    <p>Add Subject</p>
-    </a>
-    </li>
-    <li class="nav-item">
-    <a href="{{route('announcement.read')}}" class="nav-link">
-    <i class="far fa-circle nav-icon"></i>
-    <p>View Subject</p>
-    </a>
-    </li>
-    </ul>
-    </li>
-
-    <p>
-        <li class="nav-item">
-        <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-chart-pie"></i>
-        <p>
-        Assign Subject Management
-        <i class="right fas fa-angle-left"></i>
-        </p>
-        </a>
-        <ul class="nav nav-treeview">
-
-
-
-
-        <li class="nav-item">
-        <a href="{{route('assign-subject.create')}}" class="nav-link">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Add Assign Subject</p>
-        </a>
-        </li>
-        <li class="nav-item">
-        <a href="{{route('assign-subject.read')}}" class="nav-link">
-        <i class="far fa-circle nav-icon"></i>
-        <p>View Assign Subject</p>
-        </a>
-        </li>
-        </ul>
-        </li>
-        <p>
-        <li class="nav-item">
-        <a href="#" class="nav-link">
-        <i class="nav-icon fas fa-chart-pie"></i>
-        <p>
-        Teacher  Management
-        <i class="right fas fa-angle-left"></i>
-        </p>
-        </a>
-        <ul class="nav nav-treeview">
-
-
-
-
-        <li class="nav-item">
-        <a href="{{route('teacher.create')}}" class="nav-link">
-        <i class="far fa-circle nav-icon"></i>
-        <p>Add Teacher</p>
-        </a>
-        </li>
-        <li class="nav-item">
-        <a href="{{route('teacher.read')}}" class="nav-link">
-        <i class="far fa-circle nav-icon"></i>
-        <p>View Teacher</p>
-        </a>
-        </li>
-        </ul>
-        </li>
-
-        </p>
-
-
 </ul>
 </nav>
 </div>

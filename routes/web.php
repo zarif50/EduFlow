@@ -10,13 +10,25 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\AssignSubjectToClassController;
-
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\TeacherController;
 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['prefix'=>'teacher'],function(){
+         Route::group(['middleware'=>'teacher.guest'],function(){
+          Route::get('login',[TeacherController::class,'login'])->name('teacher.login');
+          Route::post('authenticate',[TeacherController::class,'authenticate'])->name('teacher.authenticate');
+         });
+         Route::group(['middleware'=>'teacher.auth'],function(){
+          Route::get('dashboard',[TeacherController::class,'dashboard'])->name('teacher.dashboard');
+          Route::get('logout',[TeacherController::class,'logout'])->name('teacher.logout');
+         });
+
+        });
 
 
 Route::group(['prefix'=>'student'],function(){

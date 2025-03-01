@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 class TeacherController extends Controller
 {
     public function index()
@@ -77,5 +78,32 @@ class TeacherController extends Controller
 
 
       }
+      public function login(){
+        return view('teacher.login');
+      }
+      public function authenticate(Request $req){
+        $req->validate([
+          'email'=>'required',
+          'password'=>'required'
+         ]);
+       if(Auth::guard('teacher')->attempt(['email'=>$req->email,'password'=>$req->password]))
+       {
+           if(Auth::guard('teacher')->user()->role!='teacher'){
+              Auth::guard('teacher')->logout();
+              return redirect()->route('teacher.login')->with('error','Unauthorized user.Access denied');
+           }
+           return redirect()->route('teacher.dashboard');
+       }
+       else{
+          return redirect()->route('teacher.login')->with('error','Something went Wrong');
+       }
+      }
+      public function dashboard(){
+        return view('teacher.dashboard');
+      }
+      public function logout(){
+        Auth::guard('teacher')->logout();
+        return redirect()->route('teacher.login')->with('success','User Logout Successfully');
+    }
 
     }
