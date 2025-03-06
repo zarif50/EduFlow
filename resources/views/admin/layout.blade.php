@@ -331,8 +331,8 @@ Studet Management
 </ul>
 </li>
 
-<<<<<<< HEAD
-=======
+
+
 <li class="nav-item">
 <a href="#" class="nav-link">
 <i class="nav-icon fas fa-chart-pie"></i>
@@ -361,7 +361,7 @@ Announcement Management
 </ul>
 </li>
 
->>>>>>> StudentManagement
+
 
 <li class="nav-item">
     <a href="#" class="nav-link">
@@ -496,6 +496,7 @@ All rights reserved.
 
 <script src="plugins/moment/moment.min.js"></script>
 <script src="plugins/daterangepicker/daterangepicker.js"></script>
+<meta name="csrf-token" content="{{csrf_token()}}"/>
 
 <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 

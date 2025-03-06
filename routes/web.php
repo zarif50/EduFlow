@@ -12,7 +12,7 @@ use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\AssignSubjectToClassController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\TeacherController;
-
+use App\Http\Controllers\AssignTeacherToClassController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -103,6 +103,11 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
   Route::post('assign-subject/update/{id}', [AssignSubjectToClassController::class,'update'])->name('assign-subject.update');
 
 //teachercontroller
+Route::get('assign-teacher/create',[AssignTeacherToClassController::class,'index'])->name('assign-teacher.create');
+Route::post('assign-teacher/store',[AssignTeacherToClassController::class,'store'])->name('assign-teacher.store');
+Route::get('findSubject',[AssignTeacherToClassController::class,'findSubject'])->name('findSubject');
+
+
 
 Route::get('teacher/create', [TeacherController::class,'index'])->name('teacher.create');
 Route::post('teacher/store', [TeacherController::class,'store'])->name('teacher.store');
