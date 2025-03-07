@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers; 
+namespace App\Http\Controllers;
+namespace App\Models;
 
-use App\Models\Classes; 
+use App\Models\Classes;
 use App\Models\User;
-use App\Models\AssignSubjectToClass;
-use App\Models\AssignTeacherToClass; 
+use app\Models\AssignSubjectToClass;
+use app\Models\AssignTeacherToClass;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 
 class AssignTeacherToClassController extends Controller
 {

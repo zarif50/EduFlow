@@ -11,8 +11,4 @@ class AssignTeacherToClass extends Model
         'class_id','subject_id','teacher_id'
 
     ];
-    public function class()
-    {
-        
-    }
 }

@@ -11,24 +11,13 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\AssignSubjectToClassController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\TeacherController;
-use App\Http\Controllers\AssignTeacherToClassController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'teacher'],function(){
-         Route::group(['middleware'=>'teacher.guest'],function(){
-          Route::get('login',[TeacherController::class,'login'])->name('teacher.login');
-          Route::post('authenticate',[TeacherController::class,'authenticate'])->name('teacher.authenticate');
-         });
-         Route::group(['middleware'=>'teacher.auth'],function(){
-          Route::get('dashboard',[TeacherController::class,'dashboard'])->name('teacher.dashboard');
-          Route::get('logout',[TeacherController::class,'logout'])->name('teacher.logout');
-         });
-
-        });
 
 
 Route::group(['prefix'=>'student'],function(){
@@ -98,28 +87,6 @@ Route::post('authenticate',[UserController::class,'authenticate'])->name('studen
   Route::get('assign-subject/create', [AssignSubjectToClassController::class,'index'])->name('assign-subject.create');
   Route::post('assign-subject/store', [AssignSubjectToClassController::class,'store'])->name('assign-subject.store');
   Route::get('assign-subject/read', [AssignSubjectToClassController::class,'read'])->name('assign-subject.read');
-  Route::get('assign-subject/delete/{id}', [AssignSubjectToClassController::class,'delete'])->name('assign-subject.delete');
-  Route::get('assign-subject/edit/{id}', [AssignSubjectToClassController::class,'edit'])->name('assign-subject.edit');
-  Route::post('assign-subject/update/{id}', [AssignSubjectToClassController::class,'update'])->name('assign-subject.update');
-
-//teachercontroller
-Route::get('assign-teacher/create',[AssignTeacherToClassController::class,'index'])->name('assign-teacher.create');
-Route::post('assign-teacher/store',[AssignTeacherToClassController::class,'store'])->name('assign-teacher.store');
-Route::get('findSubject',[AssignTeacherToClassController::class,'findSubject'])->name('findSubject');
-
-Route::get('assign-teacher/read',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.read');
-
-
-
-Route::get('teacher/create', [TeacherController::class,'index'])->name('teacher.create');
-Route::post('teacher/store', [TeacherController::class,'store'])->name('teacher.store');
-Route::get('teacher/read', [TeacherController::class,'read'])->name('teacher.read');
-Route::get('teacher/edit/{id}', [TeacherController::class,'edit'])->name('teacher.edit');
-Route::post('teacher/update/{id}', [TeacherController::class,'update'])->name('teacher.update');
-Route::get('teacher/delete/{id}', [TeacherController::class,'delete'])->name('teacher.delete');
-
-
-
 
 
   //Fees Management
@@ -135,8 +102,8 @@ Route::get('teacher/delete/{id}', [TeacherController::class,'delete'])->name('te
   Route::post('fee-structure/store',[FeeStructureController::class,'store'])->name('fee-structure.store');
   Route::get('fee-structure/read',[FeeStructureController::class,'read'])->name('fee-structure.read');
   Route::get('fee-structure/delete/{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
-  Route::get('fee-structure/edit/{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
-  Route::post('fee-structure/update/{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
+  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
+  Route::post('fee-structure/update{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
 
 
   Route::get('student/create',[StudentController::class,'index'])->name('student.create');

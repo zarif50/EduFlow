@@ -107,7 +107,7 @@ Route::get('assign-teacher/create',[AssignTeacherToClassController::class,'index
 Route::post('assign-teacher/store',[AssignTeacherToClassController::class,'store'])->name('assign-teacher.store');
 Route::get('findSubject',[AssignTeacherToClassController::class,'findSubject'])->name('findSubject');
 
-Route::get('assign-teacher/read',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.read');
+Route::get('assign-teacher/read',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.create');
 
 
 

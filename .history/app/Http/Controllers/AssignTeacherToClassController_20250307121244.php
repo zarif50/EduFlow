@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers; 
-
-use App\Models\Classes; 
+namespace App\Http\Controllers;
+use App\Models\Classes;
 use App\Models\User;
-use App\Models\AssignSubjectToClass;
-use App\Models\AssignTeacherToClass; 
+use app\Models\AssignSubjectToClass;
+use app\Models\AssignTeacherToClass;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 
 class AssignTeacherToClassController extends Controller
 {
@@ -48,8 +46,7 @@ class AssignTeacherToClassController extends Controller
     }
 
     public function read(){
-        $data['assign_teachers']=AssignTeacherToClass::latest()->get();
-        dd($data);
+        $data['assign_teacher']
     }
 
 }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers; 
 
-use App\Models\Classes; 
+use App\Models\Classes; // Correct import statement
 use App\Models\User;
 use App\Models\AssignSubjectToClass;
-use App\Models\AssignTeacherToClass; 
+use App\Models\AssignTeacherToClass; // Correct import statement
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 

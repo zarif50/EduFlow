@@ -12,7 +12,4 @@ class AssignTeacherToClass extends Model
 
     ];
     public function class()
-    {
-        
-    }
 }
