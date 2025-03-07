@@ -106,4 +106,14 @@ class TeacherController extends Controller
         return redirect()->route('teacher.login')->with('success','User Logout Successfully');
     }
 
+    public function activateTeacher($id)
+{
+    
+    $teacher = User::find($id);
+    $teacher->status = 'active';
+    $teacher->save();
+
+    return redirect()->route('teacher.read')->with('success', 'Teacher account activated successfully');
+}
+
     }
