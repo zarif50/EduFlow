@@ -20,8 +20,8 @@ class AssignTeacherToClass extends Model
 {
     return $this->belongsTo(User::class, 'teacher_id');
 }
-public function subject()
+public function class()
 {
-    return $this->belongsTo(Subject::class,'subject_id');
+    return $this->belongsTo(Classes::class,'class_id');
 }
 }

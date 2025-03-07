@@ -107,13 +107,9 @@ Route::get('assign-teacher/create',[AssignTeacherToClassController::class,'index
 Route::post('assign-teacher/store',[AssignTeacherToClassController::class,'store'])->name('assign-teacher.store');
 Route::get('findSubject',[AssignTeacherToClassController::class,'findSubject'])->name('findSubject');
 
-//Route::get('assign-teacher/read',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.read');
+//Route::get('assign-teacher/list',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.read');
 //Route::get('assign-teacher/list', [AssignTeacherToClassController::class, 'read'])->name('assign-teacher.read');
 Route::get('assign-teacher/list', [AssignTeacherToClassController::class, 'showList'])->name('assign-teacher.list');
-//Route::get('assign-teacher/read', [AssignTeacherToClassController::class, 'showList'])->name('assign-teacher.read');
-
-Route::get('assign-teacher/read/{id}', [AssignTeacherToClassController::class, 'read'])->name('assign-teacher.read');
-
 
 
 
@@ -156,3 +152,14 @@ Route::get('teacher/delete/{id}', [TeacherController::class,'delete'])->name('te
   //Route::get('fee-structure/delete{id}',[FeeStructureController::class,'delete'])->name('fee-structure.delete');
 //  Route::get('fee-structure/edit{id}',[FeeStructureController::class,'edit'])->name('fee-structure.edit');
  // Route::post('fee-structure/update{id}',[FeeStructureController::class,'update'])->name('fee-structure.update');
+
+
+
+
+
+
+
+
+
+
+

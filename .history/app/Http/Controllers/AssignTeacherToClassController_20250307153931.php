@@ -67,7 +67,7 @@ class AssignTeacherToClassController extends Controller
     public function showList()
     {
         $query = AssignTeacherToClass::with(['class', 'subject', 'teacher'])->latest('class_id');
-        
+    
         // Filter by class_id if provided
         if ($classId = request('class_id')) {
             $query->where('class_id', $classId);
@@ -76,12 +76,11 @@ class AssignTeacherToClassController extends Controller
         // Get the filtered assignments
         $assign_teachers = $query->get();
     
-        // Fetch all classes using the correct model
-        $classes = Classes::all();
-        
+        // Fetch all classes
+        $classes = Class::all();
+    
         return view('admin.assign_teacher.list', compact('assign_teachers', 'classes'));
     }
-    
     // Method to read a single teacher assignment
     public function read($id)
     {

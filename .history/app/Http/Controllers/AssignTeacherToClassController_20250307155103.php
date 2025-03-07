@@ -15,7 +15,7 @@ class AssignTeacherToClassController extends Controller
     public function index(Request $request)
     {
         // Fetch all classes
-        $classes = Classes::all();
+        //$classes = Classes::all();
 
         // Fetch assigned teachers with related class, subject, and teacher info
         $assign_teachers = AssignTeacherToClass::with(['class', 'subject', 'teacher'])

@@ -14,15 +14,15 @@ class AssignTeacherToClassController extends Controller
     // Method to display the list of assigned teachers
     public function index(Request $request)
     {
-        // Fetch all classes
-        $classes = Classes::all();
+        // Fetch all classes from the Classes model
+        $classes = Classes::all();  // Ensure this is the correct model and it's fetching the data
 
-        // Fetch assigned teachers with related class, subject, and teacher info
+        // Fetch the assigned teachers with related class, subject, and teacher info
         $assign_teachers = AssignTeacherToClass::with(['class', 'subject', 'teacher'])
             ->latest('class_id')
             ->get();
 
-        // Return the view with data
+        // Return the view with the fetched data
         return view('admin.assign_teacher.list', compact('assign_teachers', 'classes'));
     }
 
@@ -41,11 +41,11 @@ class AssignTeacherToClassController extends Controller
     // Method to store the teacher assignments
     public function store(Request $request)
     {
-        // Validate request data
+        // Validate the request
         $request->validate([
-            'class_id' => 'required|exists:classes,id',
-            'subject_id' => 'required|exists:assign_subject_to_classes,id',
-            'teacher_id' => 'required|exists:users,id',
+            'class_id' => 'required',
+            'subject_id' => 'required',
+            'teacher_id' => 'required',
         ]);
 
         // Create or update the teacher assignment
@@ -63,37 +63,38 @@ class AssignTeacherToClassController extends Controller
         return redirect()->route('assign-teacher.create')->with('success', 'Teacher Assigned Successfully');
     }
 
-    // Method to show the list of assigned teachers
+    // Method to display the list of assigned teachers (alternative to index)
+    // public function showList()
+    // {
+    //     // Fetch assigned teachers with the related data
+    //     $assign_teachers = AssignTeacherToClass::with(['class', 'subject', 'teacher'])
+    //         ->latest('class_id') // You can change this column name if needed
+    //         ->get();
+
+    //     // Return the view with the fetched data
+    //     return view('admin.assign_teacher.list', compact('assign_teachers'));
+    // }
+
     public function showList()
-    {
-        $query = AssignTeacherToClass::with(['class', 'subject', 'teacher'])->latest('class_id');
-        
-        // Filter by class_id if provided
-        if ($classId = request('class_id')) {
-            $query->where('class_id', $classId);
-        }
-    
-        // Get the filtered assignments
-        $assign_teachers = $query->get();
-    
-        // Fetch all classes using the correct model
-        $classes = Classes::all();
-        
-        return view('admin.assign_teacher.list', compact('assign_teachers', 'classes'));
-    }
-    
-    // Method to read a single teacher assignment
-    public function read($id)
-    {
-        // Fetch the assignment with associated relations
-        $assignment = AssignTeacherToClass::with(['class', 'subject', 'teacher'])->find($id);
-        
-        // If the assignment is not found, redirect with an error message
-        if (!$assignment) {
-            return redirect()->route('assign-teacher.list')->with('error', 'Assignment not found');
-        }
-    
-        // Return the view with the assignment data
-        return view('admin.assign_teacher.read', compact('assignment'));
-    }
+{
+    $assign_teachers = AssignTeacherToClass::with(['class', 'subject', 'teacher'])
+        ->latest('class_id') // You can change this column name if needed
+        ->get();
+
+    return view('admin.assign_teacher.list', compact('assign_teachers'));
+}
+
+public function read($id)
+{
+    // Fetch the assignment based on the ID
+    $assignment = AssignTeacherToClass::findOrFail($id);
+
+    // Return a view with the assignment data
+    return view('assign-teacher.read', compact('assignment'));
+}
+
+
+
+
+
 }

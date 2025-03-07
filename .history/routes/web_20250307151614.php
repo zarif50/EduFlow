@@ -109,7 +109,7 @@ Route::get('findSubject',[AssignTeacherToClassController::class,'findSubject'])-
 
 //Route::get('assign-teacher/read',[AssignTeacherToClassController::class,'read'])->name('assign-teacher.read');
 //Route::get('assign-teacher/list', [AssignTeacherToClassController::class, 'read'])->name('assign-teacher.read');
-Route::get('assign-teacher/list', [AssignTeacherToClassController::class, 'showList'])->name('assign-teacher.list');
+//Route::get('assign-teacher/list', [AssignTeacherToClassController::class, 'showList'])->name('assign-teacher.list');
 //Route::get('assign-teacher/read', [AssignTeacherToClassController::class, 'showList'])->name('assign-teacher.read');
 
 Route::get('assign-teacher/read/{id}', [AssignTeacherToClassController::class, 'read'])->name('assign-teacher.read');
