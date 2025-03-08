@@ -67,4 +67,22 @@ class AnnouncementController extends Controller
         return redirect()->route('announcement.read')->with('success','Announcement broadcast detail deleted successfully.');
 
     }
+
+    public function showRecent()
+    {
+        $recentAnnouncement = Announcement::latest()->first();
+        return response()->json($recentAnnouncement);
+    }
+
+    public function archiveOldAnnouncements()
+    {
+        // This function is for demonstration only
+        return response()->json(['message' => 'This function is not implemented yet.']);
+    }
+
+    public function filterByType($type)
+    {
+        $announcements = Announcement::where('type', $type)->get();
+        return response()->json($announcements);
+    }
 }
