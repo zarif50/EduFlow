@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 
-            
-            
-          $table->foreignId('class_id')->constrained()->onDelete('cascade')->nullable();
-            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade');
+
+
+            $table->foreignId('class_id')->constrained()->onDelete('cascade')->nullable();
+            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade')->nullable();
             $table->string('admission_date')->nullable();
             $table->string('father_name')->nullable();
             $table->string('mother_name')->nullable();

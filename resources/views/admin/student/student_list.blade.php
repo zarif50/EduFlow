@@ -61,7 +61,7 @@
 </div>
 
     </div>
-  
+
 </form>
 </div>
 
@@ -87,13 +87,12 @@
 <tr>
 <td>{{$item->id}}</td>
 <td>{{$item->name}}</td>
-<td>{{$item->name}}</td>
 <td>{{$item->studentAcademicYear->name}}</td>
 <td>{{$item->studentClass->name}}</td>
 <td>{{$item->father_name}}</td>
 <td>{{$item->mother_name}}</td>
-<td>I{{$item->mobno}}</td>
-<td>I{{$item->email}}</td>
+<td>{{$item->mobno}}</td>
+<td>{{$item->email}}</td>
 
 <td>{{$item->created_at}}</td>
 <td><a href="{{route('student.edit',$item->id)}}" class="btn btn-primary">Edit</a></td>
@@ -104,11 +103,6 @@
 </tbody>
 <tfoot>
 <tr>
-<th>ID</th>
-<th>Name</th>
-<th>Created Time</th>
-<th>Edit</th>
-<th>Delete</th>
 </tr>
 </tfoot>
 </table>
