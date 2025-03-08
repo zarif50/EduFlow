@@ -40,4 +40,20 @@ class ClassesController extends Controller
         return redirect()->route('class.read')->with('success','Class Deleted Successfully');
 
     }
+
+    public function search(Request $request)
+    {
+        $data['class'] = Classes::where('name', 'like', '%' . $request->search . '%')->get();
+        return view('admin.class.class_list', $data);
+    }
+
+    
+    public function filterByDate(Request $request)
+    {
+        $data['class'] = Classes::whereDate('created_at', $request->date)->get();
+        return view('admin.class.class_list', $data);
+    }
+
+
+
 }
